@@ -3,12 +3,14 @@
 import { useState, useRef } from 'react';
 import styles from './timer.module.css';
 import { formatTimeClock } from "@/utils/formatTime";
+import SavePopup from '../savepopup/save-popup';
 
 
 const Timer = () => {
 
     const [startClicked, setStartClicked] = useState(false);
     const [time, setTime] = useState(0);
+    const [open, setOpen] = useState(false);
 
     let intervalTimeRef = useRef(undefined);
 
@@ -23,8 +25,9 @@ const Timer = () => {
         }else{
           clearInterval(intervalTimeRef.current);
           setStartClicked(false);
+          setTime(0);
+          setOpen(true)
         }
-       
     }
 
 
@@ -51,7 +54,9 @@ const Timer = () => {
                 className={`${styles.btn} ${startClicked === true && styles.active}`}>
                     {startClicked === false ? "START" : "STOP"}</div>
             </div>
+            {open === true && <SavePopup setOpen={setOpen}/>}
         </div>
+      
     )
 }
 

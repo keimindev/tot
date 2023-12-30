@@ -11,8 +11,6 @@ const TimeRecord = () => {
         {id: 3, section: "Reading", time: 1560000, date: '2023-12-28',},
         {id: 2, section: "Dev", time: 860000, date: '2023-12-27',},
         {id: 1, section: "Reading", time: 560000, date: '2023-12-26',},
-       
-       
     ]
 
     const totalLaps = () => {

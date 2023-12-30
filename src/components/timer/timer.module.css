@@ -3,8 +3,12 @@
 	max-width: 500px;
 	border-radius: 50px;
 	background: #9b6f6f;
-	box-shadow: inset 15px 15px 38px #7f5b5b,
+	/* box-shadow: inset 15px 15px 38px #7f5b5b,
 							inset -15px -15px 38px #b78383;
+ */
+
+	box-shadow: inset -5px -5px 10px #7f5b5b,
+				inset 5px 5px 10px #b78383;
 	padding: 10px 20px;
 	margin-top: 50px;
 
