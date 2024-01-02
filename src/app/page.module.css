@@ -13,6 +13,11 @@
   align-items: center;
 }
 
+.title{
+  display: flex;
+  font-size: 13px;
+  align-items: end;
+}
 
 /* Responsive design for mobile view */
 @media (max-width: 600px) {

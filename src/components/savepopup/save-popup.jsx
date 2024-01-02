@@ -3,6 +3,7 @@ import styles from "./save-popup.module.css";
 
 export async function postRecord(req) {
   console.log('Request Body:', req);
+ 
   try {
     const res = await fetch('http://localhost:3000/api/record', {
       method: 'POST',
@@ -17,7 +18,7 @@ export async function postRecord(req) {
     }
 
     const data = await req.json()
-    return Response.json(data)
+    return Response.json()
   } catch (error) {
     console.error('Error:', error);
   }

@@ -2,7 +2,7 @@ import styles from "./time-record.module.css";
 import { formatTimeClock } from "@/utils/formatTime";
 import { getRecords } from "@/lib/data";
 
-const TimeRecord = async () => {
+const TimeRecord = async ({records}) => {
 
     const record = await getRecords();
 
@@ -14,7 +14,7 @@ const TimeRecord = async () => {
           {record?.map((content) => {
            return(
              <div className={styles.recordLine} key={content.time}>
-                <div className={`${styles.recordDay} ${isToday === content.createdAt?.toString().slice(4, 16) && today}`}>{content.createdAt?.toString().slice(4, 16)}</div>
+                <div className={`${styles.recordDay} ${isToday === content.createdAt?.toString().slice(4, 16) && styles.today}`}>{content.createdAt?.toString().slice(4, 16)}</div>
                 <div className={styles.recordTimeBox}>
                 <div className={styles.section}>{content.section}</div>
                 <div>{formatTimeClock(content.time)}</div>

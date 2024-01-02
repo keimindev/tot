@@ -17,7 +17,6 @@ const recordsSchema = new mongoose.Schema(
         time: {
             type: Number,
             required: true,
-            max: 50,
         },
         section:{
             type: String,

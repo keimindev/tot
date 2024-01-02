@@ -7,7 +7,7 @@ export const getRecords = async () => {
 
     try {
         ConnectToDb();
-        const records = await Record.find();
+        const records = await Record.find().sort({ createdAt: -1 });
         console.log(records)
         return records
     } catch (error) {
