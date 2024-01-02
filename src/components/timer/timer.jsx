@@ -25,7 +25,6 @@ const Timer = () => {
         }else{
           clearInterval(intervalTimeRef.current);
           setStartClicked(false);
-          setTime(0);
           setOpen(true)
         }
     }
@@ -40,8 +39,6 @@ const Timer = () => {
     return(
         <div>
         <div className={styles.container}>
-            {/* timer clock */}
-             {/* 00:00:00 */}
              {formatTimeClock(time)}
         </div>
             {/* button container */}
@@ -54,7 +51,7 @@ const Timer = () => {
                 className={`${styles.btn} ${startClicked === true && styles.active}`}>
                     {startClicked === false ? "START" : "STOP"}</div>
             </div>
-            {open === true && <SavePopup setOpen={setOpen}/>}
+            {open === true && <SavePopup setOpen={setOpen} time={time} setTime={setTime}/>}
         </div>
       
     )

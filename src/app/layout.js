@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'T.O.T(Trace Of Time)',
-  description: 'Trace of Time',
+  description: 'T.O.T.1.0.0',
 }
 
 export default function RootLayout({ children }) {

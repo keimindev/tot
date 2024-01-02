@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { ConnectToDb } from "./connectToDB"
 import { Record } from "./models";
 
@@ -14,3 +15,24 @@ export const getRecords = async () => {
     }
 
 }
+
+// export const addRecord = async({time}) => {
+//  const { username, time, section } = Object.fromEntries(formData);
+
+//     try {
+//        ConnectToDb();
+       
+//        const newRecord = new Record({
+//         username: 'min',
+//         time,
+//         section : 'Reading',
+//        })
+
+//        await newRecord.save();
+//        console.log('saved to db');
+//        revalidatePath("/")
+//     } catch (error) {
+//         console.log(error)
+//     }
+
+// }

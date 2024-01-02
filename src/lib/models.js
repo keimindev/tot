@@ -2,12 +2,17 @@ import mongoose from "mongoose";
 
 const recordsSchema = new mongoose.Schema(
     {
+        userId: {
+            type: Number,
+            required: true,
+            unique:true,
+        },
         username:{
             type: String,
             required: true,
             unique: true,
-            min:3,
-            max: 10
+            minlength: 3,
+            maxlength: 10
         },
         time: {
             type: Number,
@@ -17,8 +22,8 @@ const recordsSchema = new mongoose.Schema(
         section:{
             type: String,
             required: true,
-            min:1,
-            max: 50
+            minlength: 1,
+            maxlength: 50
         },
     },
     {timestamps: true }

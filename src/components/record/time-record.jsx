@@ -13,7 +13,7 @@ const TimeRecord = async () => {
           <div className={styles.totalCount}>Total 0</div>
           {record?.map((content) => {
            return(
-             <div className={styles.recordLine} key={content.username}>
+             <div className={styles.recordLine} key={content.time}>
                 <div className={`${styles.recordDay} ${isToday === content.createdAt?.toString().slice(4, 16) && today}`}>{content.createdAt?.toString().slice(4, 16)}</div>
                 <div className={styles.recordTimeBox}>
                 <div className={styles.section}>{content.section}</div>
