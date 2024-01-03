@@ -1,14 +1,16 @@
 "use client";
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef} from 'react';
 import styles from './timer.module.css';
 import { formatTimeClock } from "@/utils/formatTime";
 import SavePopup from '../savepopup/save-popup';
+import { Stopwatch } from '@/utils/stopwatch';
 
 
 const Timer = () => {
 
     const [startClicked, setStartClicked] = useState(false);
+    const [stopwatch, setStopwatch] = useState(new Stopwatch());
     const [time, setTime] = useState(0);
     const [open, setOpen] = useState(false);
 
@@ -18,12 +20,14 @@ const Timer = () => {
     // timer start & stop
     const timerRun = () => {
         if(!startClicked){
+          stopwatch.start();
           intervalTimeRef.current =  setInterval(() =>{
-                setTime((prev) => prev + 1000);
+                setTime(stopwatch.getTime());
             }, 1000);
             setStartClicked(true)
         }else{
           clearInterval(intervalTimeRef.current);
+          stopwatch.stop();
           setStartClicked(false);
           setOpen(true)
         }
@@ -34,6 +38,7 @@ const Timer = () => {
       setTime(0);
       clearInterval(intervalTimeRef.current);
       setStartClicked(false);
+      setStopwatch(new Stopwatch())
     }
 
     return(
