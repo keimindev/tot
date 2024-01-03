@@ -2,7 +2,7 @@
 import { ConnectToDb } from "./connectToDB"
 import { Record } from "./models";
 
-
+export const dynamic = 'force-dynamic';
 export const getRecords = async () => {
 
     try {
