@@ -9,7 +9,7 @@ export default async function Home() {
       <div className={styles.title}>T.O.T v.1.0.0</div>
       <Timer />
       <TimeRecord/>
-      <div className={styles.footer}>Min creative thoughts agency © All rights reserved.</div>
+      <div className={styles.footer}>Copyrightⓒ2024 MIN All rights reserved.</div>
     </main>
   )
 }

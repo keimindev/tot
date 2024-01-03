@@ -3,7 +3,7 @@
 /* Basic styling for the main content container */
 .container {
   max-width: 800px;
-  height: 100vh;
+  height: 95vh;
   margin: 0 auto;
   padding: 20px;
   background-color: #9b6f6f;
@@ -34,6 +34,7 @@
 /* Responsive design for mobile view */
 @media (max-width: 600px) {
   .container {
+    max-width: 600px;
     padding: 10px;
   }
 }
