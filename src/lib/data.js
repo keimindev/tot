@@ -1,4 +1,4 @@
-import { revalidatePath } from "next/cache";
+// import { revalidatePath } from "next/cache";
 import { ConnectToDb } from "./connectToDB"
 import { Record } from "./models";
 
@@ -9,7 +9,7 @@ export const getRecords = async () => {
         ConnectToDb();
         const records = await Record.find().sort({ createdAt: -1 });
         
-        revalidatePath('/')
+        // revalidatePath('/')
         return records
     } catch (error) {
         console.log(error)

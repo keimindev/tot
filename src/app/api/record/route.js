@@ -1,6 +1,5 @@
 import { ConnectToDb } from "@/lib/connectToDB";
 import { Record } from "@/lib/models";
-import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 
 
@@ -14,8 +13,6 @@ export const POST = async(req, res) => {
 
       const newRecord = new Record(data);
       await newRecord.save();
-
-      revalidatePath("/");
       return NextResponse.json(data);
 
     } catch (err) {
