@@ -1,4 +1,3 @@
-// export { POST } from "@/lib/fetchHandler"
 import { ConnectToDb } from "@/lib/connectToDB";
 import { Record } from "@/lib/models";
 import { revalidatePath } from "next/cache";

@@ -2,7 +2,8 @@ import styles from "./time-record.module.css";
 import { formatTimeClock } from "@/utils/formatTime";
 import { getRecords } from "@/lib/data";
 
-const TimeRecord = async ({records}) => {
+
+const TimeRecord = async () => {
 
     const record = await getRecords();
 

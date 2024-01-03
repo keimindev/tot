@@ -1,9 +1,10 @@
+'use client'
+
 import { formatTimeClock } from "@/utils/formatTime";
 import styles from "./save-popup.module.css";
+import { useRouter } from 'next/navigation';
 
 export async function postRecord(req) {
-  console.log('Request Body:', req);
- 
   try {
     const res = await fetch('http://localhost:3000/api/record', {
       method: 'POST',
@@ -16,9 +17,6 @@ export async function postRecord(req) {
     if (!res.ok) {
       throw new Error(`Failed to save record. Status: ${res.status}`);
     }
-
-    const data = await req.json()
-    return Response.json()
   } catch (error) {
     console.error('Error:', error);
   }
@@ -26,6 +24,7 @@ export async function postRecord(req) {
 }
 
 const SavePopup = ({setOpen, time, setTime}) => {
+  const router = useRouter();
 
   const requestBody = {
     time:time, 
@@ -35,9 +34,12 @@ const SavePopup = ({setOpen, time, setTime}) => {
   }
 
     const addRecord = async() => {
-      postRecord(requestBody)
+      await postRecord(requestBody); 
+      setOpen(false);
+      setTime(0);
+      router.refresh()
     }
-    
+
     return (
         <div className={styles.container}>
             <div className={styles.section}>

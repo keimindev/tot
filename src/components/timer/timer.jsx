@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import styles from './timer.module.css';
 import { formatTimeClock } from "@/utils/formatTime";
 import SavePopup from '../savepopup/save-popup';
