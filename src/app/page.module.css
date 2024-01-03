@@ -14,9 +14,20 @@
 }
 
 .title{
-  display: flex;
-  font-size: 13px;
-  align-items: flex-end;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.footer{
+  position: absolute;
+  bottom: 10px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
 }
 
 /* Responsive design for mobile view */
