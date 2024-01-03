@@ -8,7 +8,7 @@ const nextConfig = {
     
     //     return config;
     // }
-    headers() {
+    async headers() {
         return [
           {
             // matching all API routes
