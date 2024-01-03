@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 
 export async function postRecord(req) {
   try {
-    const res = await fetch('/api/record', {
+    const res = await fetch('/api/record',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

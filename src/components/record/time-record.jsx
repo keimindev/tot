@@ -2,7 +2,7 @@ import styles from "./time-record.module.css";
 import { formatTimeClock } from "@/utils/formatTime";
 import { getRecords } from "@/lib/data";
 
-
+export const dynamic = 'force-dynamic'; 
 const TimeRecord = async () => {
 
     const record = await getRecords();
