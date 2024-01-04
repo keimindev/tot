@@ -24,7 +24,7 @@ export async function postRecord(req) {
 
 }
 
-const SavePopup = ({setOpen, time, setTime}) => {
+const SavePopup = ({setOpen, time, setTime, setStartTime}) => {
   const router = useRouter();
 
   const requestBody = {
@@ -38,6 +38,7 @@ const SavePopup = ({setOpen, time, setTime}) => {
       await postRecord(requestBody); 
       setOpen(false);
       setTime(0);
+      setStartTime(null)
       router.refresh()
     }
 
