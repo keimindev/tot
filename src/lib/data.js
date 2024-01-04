@@ -16,3 +16,23 @@ export const getRecords = async () => {
     }
 
 }
+
+export const getTotalTime = async () => {
+    try {
+      const totalTimeResult = await Record.aggregate([
+        {
+          $group: {
+            _id: null,
+            totalTime: { $sum: "$time" },
+          },
+        },
+      ]);
+  
+      // 결과에서 totalTime 값 가져오기
+      const totalTime = totalTimeResult.length > 0 ? totalTimeResult[0].totalTime : 0;
+  
+      return totalTime;
+    } catch (error) {
+      console.log(error);
+    }
+  };
