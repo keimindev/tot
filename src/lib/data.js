@@ -1,4 +1,5 @@
 
+import { signOut , signIn } from "./auth";
 import { ConnectToDb } from "./connectToDB"
 import { Record } from "./models";
 import { revalidatePath } from "next/cache";
@@ -36,3 +37,15 @@ export const getTotalTime = async () => {
       console.log(error);
     }
   };
+
+
+  export const handleGithubLogin = async () => {
+    "use server"
+    await signIn("github")
+
+}
+
+  export const handleGithubLogOut = async () => {
+    "use server"
+    await signOut("github")
+  }

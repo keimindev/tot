@@ -17,11 +17,18 @@
 .title{
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   font-size: 12px;
   color: #fff;
   font-weight: bold;
 }
+
+
+.username{
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
 
 .footer{
   position: absolute;
@@ -30,6 +37,22 @@
   color: #fff;
   font-weight: bold;
 }
+
+.logoutBox{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.logoutBtn{
+  padding: 10px 10px;
+  background-color: white;
+  color: #7f5b5b;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+
 
 /* Responsive design for mobile view */
 @media (max-width: 600px) {
