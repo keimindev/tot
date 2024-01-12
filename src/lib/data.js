@@ -1,6 +1,7 @@
 
+import { signOut , signIn } from "./auth";
 import { ConnectToDb } from "./connectToDB"
-import { Record } from "./models";
+import { Record, User } from "./models";
 import { revalidatePath } from "next/cache";
 
 export const getRecords = async () => {
@@ -36,3 +37,29 @@ export const getTotalTime = async () => {
       console.log(error);
     }
   };
+
+export const getUserInfo = async (name) => {
+    try {
+      ConnectToDb();
+        const user = await User.findOne({email : name})
+        revalidatePath('/')
+        return user
+      
+    } catch (error) {
+        console.log(error)
+    }
+
+}
+
+
+export const handleGithubLogin = async () => {
+    "use server"
+    await signIn("github")
+
+}
+
+export const handleGithubLogOut = async () => {
+    "use server"
+    await signOut("github")
+  }
+

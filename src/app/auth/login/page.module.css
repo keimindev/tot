@@ -1,0 +1,35 @@
+.container{
+    width: 100%;
+    position: relative;
+    top: 350px;
+}
+
+.title{
+    color: #c9a6a6;
+    font-size: 60px;
+}
+
+.subtitle{
+    color: #c9a6a67c;
+}
+
+
+
+.loginbox{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.loginBtn{
+    padding: 10px 20px;
+    background-color: white;
+    color: #7f5b5b;
+    border-radius: 5px;
+    border: none;
+
+    margin-top: 30px;
+    cursor: pointer;
+}

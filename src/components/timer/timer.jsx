@@ -6,7 +6,7 @@ import { formatTimeClock } from "@/utils/formatTime";
 import SavePopup from '../savepopup/save-popup';
 
 
-const Timer = () => {
+const Timer = ({user}) => {
 
     const [startClicked, setStartClicked] = useState(false);
     const [startTime, setStartTime] = useState(null);
@@ -56,6 +56,7 @@ const Timer = () => {
             </div>
             {open === true && 
             <SavePopup 
+            user={user}
             setOpen={setOpen} 
             time={timePassed} 
             setTime={setTime}
