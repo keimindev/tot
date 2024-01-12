@@ -24,13 +24,13 @@ export async function postRecord(req) {
 
 }
 
-const SavePopup = ({setOpen, time, setTime, setStartTime}) => {
+const SavePopup = ({setOpen, time, setTime, setStartTime, user}) => {
   const router = useRouter();
 
   const requestBody = {
     time:time, 
-    username: 'min', 
-    userId :1, 
+    username: user.username, 
+    userId :user.id, 
     section:"Reading"
   }
 

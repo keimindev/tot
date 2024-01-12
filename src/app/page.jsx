@@ -4,11 +4,13 @@ import TimeRecord from '@/components/record/time-record'
 import { auth } from '@/lib/auth'
 import LoginPage from './auth/login/page';
 import { handleGithubLogOut } from "@/lib/data";
+import { getUserInfo } from "@/lib/data";
 
 
 export default async function Home() {
 
   const session = await auth();
+  const userInfo = await getUserInfo(session?.user?.email);
 
   return (
     <main className={styles.container}>
@@ -22,7 +24,7 @@ export default async function Home() {
       </div>
       <h2 className={styles.username}>Hello {session.user.name} 👋🏻</h2>
       <div className={styles.innerbox}>
-        <Timer />
+        <Timer user ={userInfo} />
         <TimeRecord/>
       </div>
     </div>
