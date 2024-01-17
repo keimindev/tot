@@ -14,9 +14,9 @@
                 inset 5px 5px 6px #edc4c4; */
  
     border-radius: 20px;
-	background: #c9a6a6;
-	box-shadow:  15px 15px 38px #7f5b5b,
-	-15px -15px 38px #b78383;
+	background: var(--btn);
+	box-shadow:  15px 15px 38px var(--bg),
+	-15px -15px 38px var(--bg);
 
 }
 
@@ -30,9 +30,10 @@
 }
 
 .btn{
-    background-color: rgba(255,255,255,0.8);
+    background-color: var(--bg);
     padding: 10px 20px;
     border-radius: 20px;
+    color: var(--text);
 
     cursor: pointer;
 }
@@ -48,7 +49,8 @@
 
 .cate{
     padding: 5px 10px;
-    background-color: rgba(255,255,255);
+    background-color: var(--text);
+    color: var(--bg);
     border-radius: 20px;
     font-weight: bold;
 }
