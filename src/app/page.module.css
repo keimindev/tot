@@ -6,7 +6,7 @@
   height: 100vh;
   margin: 0 auto;
   padding: 20px;
-  background-color: #9b6f6f;
+  background-color: #2C4A52;
 
   display: flex;
   flex-direction: column;
@@ -46,7 +46,7 @@
 .logoutBtn{
   padding: 10px 10px;
   background-color: white;
-  color: #7f5b5b;
+  color: #537072;
   border-radius: 5px;
   border: none;
   cursor: pointer;

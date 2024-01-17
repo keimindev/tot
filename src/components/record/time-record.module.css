@@ -3,7 +3,7 @@
     padding: 20px;
     margin-top: 30px;
 
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: rgba(255,255,255,0.1);
     
     max-height: 500px;
@@ -13,7 +13,7 @@
 
 /* 스크롤 바 전체에 대한 스타일 지정 */
 .container::-webkit-scrollbar {
-    padding-right: 10px;
+    padding-right: 20px;
     width: 3px; /* 스크롤 바의 너비 */
     height: 3px; /* 스크롤 바의 높이 */
     background-color: none;  /* 스크롤 바의 배경색 */
@@ -21,7 +21,7 @@
   
   /* 스크롤 바의 색상 지정 */
   .container::-webkit-scrollbar-thumb {
-    background-color:#9b6f6f; /* 스크롤 바의 색상 */
+    background-color:var(--bg); /* 스크롤 바의 색상 */
   }
   
   /* 스크롤 바 호버 시 색상 지정 */
@@ -57,8 +57,9 @@
 .section{
     font-size: 14px;
     padding: 5px 10px;
-    background-color: rgba(255,255,255);
+    background-color: #F4EBDB;
     border-radius: 20px;
+    color: var(--bg);
 }
 
 .today{

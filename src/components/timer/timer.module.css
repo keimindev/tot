@@ -2,13 +2,13 @@
 	width: 500px;
 	max-width: 500px;
 	border-radius: 50px;
-	background: #9b6f6f;
+	background: #537072;
 	/* box-shadow: inset 15px 15px 38px #7f5b5b,
 							inset -15px -15px 38px #b78383;
  */
 
-	box-shadow: inset -5px -5px 10px #7f5b5b,
-				inset 5px 5px 10px #b78383;
+	box-shadow: inset -5px -5px 10px #2C4A52,
+				inset 5px 5px 10px #839B97;
 	padding: 10px 20px;
 
 	font-size: 60px;
@@ -31,9 +31,9 @@
 	width: 40%;
 	height: 40px;
 	border-radius: 20px;
-	background: #c9a6a6;
-	box-shadow:  15px 15px 38px #7f5b5b,
-	-15px -15px 38px #b78383;
+	background: #839B97;
+	/* box-shadow:  15px 15px 38px #537072,
+	-15px -15px 38px #537072; */
 
 	text-align: center;
 	line-height: 40px;
@@ -42,8 +42,8 @@
 }
 
 .active{
-	background-color: #e8d9d9;
-	/* color: #c9a6a6; */
+	background-color: #F4EBDB;
+	color: #537072;
 	font-weight: bold;
 }
 

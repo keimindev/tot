@@ -5,12 +5,12 @@
 }
 
 .title{
-    color: #c9a6a6;
+    color: var(--text);
     font-size: 60px;
 }
 
 .subtitle{
-    color: #c9a6a67c;
+    color: var(--text);
 }
 
 
@@ -26,7 +26,7 @@
 .loginBtn{
     padding: 10px 20px;
     background-color: white;
-    color: #7f5b5b;
+    color: var(--bg);
     border-radius: 5px;
     border: none;
 
