@@ -18,9 +18,19 @@ export const getRecords = async () => {
 
 }
 
-export const getTotalTime = async () => {
+export const getTotalTime = async (currentYear, currentMonth) => {
     try {
       const totalTimeResult = await Record.aggregate([
+        {
+          $match: {
+            $expr: {
+              $and: [
+                { $eq: [{ $year: "$createdAt" }, currentYear] },
+                { $eq: [{ $month: "$createdAt" }, currentMonth] },
+              ],
+            },
+          },
+        },
         {
           $group: {
             _id: null,
@@ -37,6 +47,24 @@ export const getTotalTime = async () => {
       console.log(error);
     }
   };
+
+// 달 별로 데이터 수 불러오기 
+export const getRecordsByMonth = async (year,month) => {
+  try {
+    ConnectToDb();
+    const records = await Record.find({
+      createdAt: {
+        $gte: new Date(`${year}-0${month}-01T00:00:00.000Z`),
+        $lt: new Date(`${year}-0${month + 1}-01T00:00:00.000Z`),
+      },
+    }).sort({ createdAt: -1 });
+    
+    revalidatePath('/');
+    return records;
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 export const getUserInfo = async (name) => {
     try {
