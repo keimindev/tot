@@ -43,15 +43,20 @@
 .recordDay{
     padding-bottom: 5px;
     border-bottom: 1px solid #fff;
+    margin-bottom: 5px;
 }
 
 .recordTimeBox{
     display: flex;
+    flex-direction: column;
+}
+
+.recordBox{
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 0px;
-    
+    margin: 5px 0px;
 }
 
 .section{

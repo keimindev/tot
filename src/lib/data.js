@@ -52,15 +52,63 @@ export const getTotalTime = async (currentYear, currentMonth) => {
 export const getRecordsByMonth = async (year,month) => {
   try {
     ConnectToDb();
-    const records = await Record.find({
-      createdAt: {
-        $gte: new Date(`${year}-0${month}-01T00:00:00.000Z`),
-        $lt: new Date(`${year}-0${month + 1}-01T00:00:00.000Z`),
+
+    const recordsByDayAndSection = await Record.aggregate([
+      {
+        $match: {
+          createdAt: {
+            $gte: new Date(`${year}-0${month}-01T00:00:00.000Z`),
+            $lt: new Date(`${year}-0${month + 1}-01T00:00:00.000Z`),
+          },
+        },
       },
-    }).sort({ createdAt: -1 });
-    
+      {
+        $group: {
+          _id: {
+            year: { $year: "$createdAt" },
+            month: { $month: "$createdAt" },
+            day: { $dayOfMonth: "$createdAt" },
+            section: "$section",
+          },
+          time: { $sum: "$time" },
+        },
+      },
+      {
+        $group: {
+          _id: {
+            year: "$_id.year",
+            month: "$_id.month",
+            day: "$_id.day",
+          },
+          dayRecord: {
+            $push: {
+              section: "$_id.section",
+              time: "$time",
+            },
+          },
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          year: "$_id.year",
+          month: "$_id.month",
+          day: "$_id.day",
+          dayRecord: 1,
+        },
+      },
+      {
+        $sort: {
+          year: -1,
+          month: -1,
+          day: -1,
+        },
+      },
+    ]);
+
     revalidatePath('/');
-    return records;
+    console.log(recordsByDayAndSection[0]);
+    return recordsByDayAndSection;
   } catch (error) {
     console.error(error);
   }

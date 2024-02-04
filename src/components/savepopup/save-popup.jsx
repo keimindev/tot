@@ -3,6 +3,7 @@
 import { formatTimeClock } from "@/utils/formatTime";
 import styles from "./save-popup.module.css";
 import { useRouter } from 'next/navigation';
+import { useState } from "react";
 
 export async function postRecord(req) {
   try {
@@ -26,12 +27,17 @@ export async function postRecord(req) {
 
 const SavePopup = ({setOpen, time, setTime, setStartTime, user}) => {
   const router = useRouter();
+  const [section, setSection] = useState();
 
   const requestBody = {
     time:time, 
     username: user.username, 
     userId :user.id, 
-    section:"Reading"
+    section:section
+  }
+
+  const onClickSection = (value) =>{
+    setSection(value)
   }
 
     const addRecord = async() => {
@@ -44,8 +50,12 @@ const SavePopup = ({setOpen, time, setTime, setStartTime, user}) => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.section}>
-            <div className={styles.cate}>Reading</div>
+            <div className={styles.sections}>
+              <div className={styles.section}>
+              <div className={styles.cate} onClick={() => onClickSection("Reading")}>Reading</div>
+              <div className={styles.cate} onClick={() => onClickSection("Study")}>Study</div>
+              <div className={styles.cate} onClick={() => onClickSection("Workout")}>Workout</div>
+            </div>
             <div className={styles.time}>{formatTimeClock(time)}</div>
             </div>
             <div className={styles.btnBox}>
