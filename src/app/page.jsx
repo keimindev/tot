@@ -5,6 +5,7 @@ import { auth } from '@/lib/auth'
 import LoginPage from './auth/login/page';
 import { handleGithubLogOut } from "@/lib/data";
 import { getUserInfo } from "@/lib/data";
+import Main from '@/components/main/main';
 
 
 export default async function Home() {
@@ -14,19 +15,19 @@ export default async function Home() {
 
   return (
     <main className={styles.container}>
-      <div className={styles.title}>T.O.T v.1.0.0</div>
+      {/* <div className={styles.title}>T.O.T v.1.0.0</div> */}
       {session?.user ? (
         <div>
       <div className={styles.logoutBox}>
-      <form action = {handleGithubLogOut}>
+      {/* <form action = {handleGithubLogOut}>
                 <button className={styles.logoutBtn}>Logout</button>
-      </form>
+      </form> */}
       </div>
-      <h2 className={styles.username}>Hello {session.user.name} 👋🏻</h2>
-      <div className={styles.innerbox}>
-        <Timer user ={userInfo} />
+      <Main user={session.user}/>
+       {/* <div className={styles.innerbox}> */}
+        {/* <Timer user ={userInfo} /> */}
         <TimeRecord/>
-      </div>
+      {/* </div> */}
     </div>
       ) : ( <LoginPage/>)}
       <div className={styles.footer}>Copyrightⓒ2024 MIN All rights reserved.</div>
