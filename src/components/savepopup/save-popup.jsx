@@ -51,11 +51,6 @@ const SavePopup = ({setOpen, time, setTime, setStartTime, user}) => {
     return (
         <div className={styles.container}>
             <div className={styles.sections}>
-              <div className={styles.section}>
-              <div className={styles.cate} onClick={() => onClickSection("Reading")}>Reading</div>
-              <div className={styles.cate} onClick={() => onClickSection("Study")}>Study</div>
-              <div className={styles.cate} onClick={() => onClickSection("Workout")}>Workout</div>
-            </div>
             <div className={styles.time}>{formatTimeClock(time)}</div>
             </div>
             <div className={styles.btnBox}>

@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useRef} from 'react';
+import Link from 'next/link';
 import styles from './page.module.css';
 import { formatTimeClock } from "@/utils/formatTime";
-// import SavePopup from '../savepopup/save-popup';
+import SavePopup from '@/components/savepopup/save-popup';
 
 
 const TimerPage = ({user}) => {
@@ -54,13 +55,15 @@ const TimerPage = ({user}) => {
                 className={`${styles.btn} ${startClicked=== true && styles.active}`}>
                     {startClicked === false ? "START" : "STOP"}</div>
             </div>
-            {/* {open === true && 
+            <Link href="/">
+            <div className={styles.backBtn}>Back to Home</div></Link>
+            {open === true && 
             <SavePopup 
             user={user}
             setOpen={setOpen} 
             time={timePassed} 
             setTime={setTime}
-            setStartTime={setStartTime}/>} */}
+            setStartTime={setStartTime}/>}
         </div>
       
     )

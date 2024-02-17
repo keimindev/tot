@@ -11,10 +11,10 @@ const Main = ({user}) => {
     <div className={styles.userinfo}>
       <div className={styles.userWelcom}>
          <p>Welcome to</p>
-         <p>Your time is 1,000 hr</p>
+         {/* <p>Your time is 00000 hr</p> */}
       </div>
       <div className={styles.userinfobox}>
-         <p>{user.name}</p>
+         <p>{user.name} </p>
          <p className={styles.userImg}><Image src={user.image} alt="profile img" width={30} height={30}/></p>
       </div>
       </div>

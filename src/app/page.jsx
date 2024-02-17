@@ -30,9 +30,9 @@ export default async function Home() {
       ) : (
         <LoginPage />
       )}
-      <div className={styles.footer}>
+      {/* <div className={styles.footer}>
         Copyrightⓒ2024 MIN All rights reserved.
-      </div>
+      </div> */}
     </main>
   );
 }

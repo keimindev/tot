@@ -14,11 +14,11 @@ const Category = () => {
       {list.map((item) => {
         return (
           <>
-          <Link href="/stopwatch">
+         
           <div className={styles.categoryLine}>
-            {item.content}
+          <Link href="/stopwatch"> {item.content} </Link>
           </div>
-          </Link>
+         
           </>
         )
       })}

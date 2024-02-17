@@ -3,6 +3,7 @@
     padding: 20px;
     margin-top: 20px;
     max-height: 500px;
+    background-color: #2C4A52;
     /* overflow-y: scroll; */
 
 }
@@ -57,11 +58,11 @@
     flex-direction: column;
 }
 
-.recordBox{
+.nothingBox{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin: 5px 0px;
 }
 
@@ -79,6 +80,7 @@
 /* session box */
 .sessionbox{
     margin-top:30px;
+    padding-bottom: 50px;
 }
 
 .sessionInnerbox{

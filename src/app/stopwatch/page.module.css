@@ -10,26 +10,27 @@
 	flex-direction: column;
 	align-items: center;
 	position: relative;
+
+	padding-top: 200px;
   }
 
 
 .innerbox{
 	width: 300px;
-	max-width: 500px;
-	border-radius: 50px;
-	background: #537072;
-	/* box-shadow: inset 15px 15px 38px #7f5b5b,
-							inset -15px -15px 38px #b78383;
- */
-
-	box-shadow: inset -5px -5px 10px #2C4A52,
-				inset 5px 5px 10px #839B97;
-	padding: 10px 20px;
-
-	font-size: 60px;
+	height: 300px;
+	line-height: 300px;
+	border-radius: 50%;
+	background: #53707274;
+	font-size: 50px;
 	font-weight: bold;
 	color: #fff;
 	text-align: center;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+
+
 }
 
 .buttonContainer{
@@ -38,28 +39,28 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 30px;
-	padding-left: 20%;
-	padding-right: 20%;
 }
 
 .btn{
-	width: 40%;
 	height: 40px;
-	border-radius: 20px;
-	background: #839B97;
-	/* box-shadow:  15px 15px 38px #537072,
-	-15px -15px 38px #537072; */
-
 	text-align: center;
 	line-height: 40px;
 	color: var(--text);
+	font-size: 18px;
 	cursor: pointer;
+	margin: 0px 20px;
 }
 
 .active{
-	background-color: #F4EBDB;
+	/* background-color: #F4EBDB; */
 	color: #537072;
 	font-weight: bold;
+}
+
+.backBtn{
+	margin-top: 30px;
+	color: var(--btn);
+	cursor: pointer;
 }
 
 
@@ -67,9 +68,10 @@
 @media (max-width: 600px) {
 	.container {
 	  max-width: 425px;
-	  padding: 10px;
 	  /* height: 876px; */
 	  height: 100vh;
+	  padding-top: 250px;
 	}
+
   }
   
