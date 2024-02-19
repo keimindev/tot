@@ -36,9 +36,6 @@ const SavePopup = ({setOpen, time, setTime, setStartTime, user}) => {
     section:section
   }
 
-  const onClickSection = (value) =>{
-    setSection(value)
-  }
 
     const addRecord = async() => {
       await postRecord(requestBody); 
