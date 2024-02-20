@@ -1,4 +1,4 @@
-'use client';
+
 import Image from 'next/image';
 import styles from './main.module.css'
 import Link from 'next/link';
@@ -20,7 +20,7 @@ const Main = ({user}) => {
       </div>
       <div className={styles.timerbox}>
       <div>⏰ Tracking Time</div>
-      <Link href="/category">
+      <Link href="/section">
       <div className={styles.timerbtn}>Start timer</div></Link>
       </div>
     </div>

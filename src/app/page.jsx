@@ -7,6 +7,7 @@ import { handleGithubLogOut } from "@/lib/data";
 import { getUserInfo } from "@/lib/data";
 import Main from "@/components/main/main";
 
+
 export default async function Home() {
   const session = await auth();
   const userInfo = await getUserInfo(session?.user?.email);

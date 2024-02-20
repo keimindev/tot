@@ -3,7 +3,10 @@
 import { formatTimeClock } from "@/utils/formatTime";
 import styles from "./save-popup.module.css";
 import { useRouter } from 'next/navigation';
-import { useState } from "react";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { sectionState } from "@/recoil/sectionAtom";
+import { userState } from "@/recoil/userAtom";
+import { useEffect } from "react";
 
 export async function postRecord(req) {
   try {
@@ -25,15 +28,26 @@ export async function postRecord(req) {
 
 }
 
-const SavePopup = ({setOpen, time, setTime, setStartTime, user}) => {
+const SavePopup = ({setOpen, time, setTime, setStartTime}) => {
   const router = useRouter();
-  const [section, setSection] = useState();
+  const sectionofrecord = useRecoilValue(sectionState)
+
+  //user
+  const [user, setUser] = useRecoilState(userState);
+
+  useEffect(() => {
+    (async() => {
+      const userInfo = await getUserInfo(session?.user?.email);
+      setUser(userInfo)
+    })()
+
+  },[])
 
   const requestBody = {
     time:time, 
     username: user.username, 
     userId :user.id, 
-    section:section
+    section:sectionofrecord
   }
 
 

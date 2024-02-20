@@ -7,7 +7,7 @@ import { formatTimeClock } from "@/utils/formatTime";
 import SavePopup from '@/components/savepopup/save-popup';
 
 
-const TimerPage = ({user}) => {
+const TimerPage = () => {
 
     const [startClicked, setStartClicked] = useState(false);
     const [startTime, setStartTime] = useState(null);
@@ -59,7 +59,6 @@ const TimerPage = ({user}) => {
             <div className={styles.backBtn}>Back to Home</div></Link>
             {open === true && 
             <SavePopup 
-            user={user}
             setOpen={setOpen} 
             time={timePassed} 
             setTime={setTime}
