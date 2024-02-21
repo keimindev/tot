@@ -1,13 +1,9 @@
 import styles from "./mypage.module.css";
 import { handleGithubLogOut } from "@/lib/data";
-import { getUserInfo } from "@/lib/data";
 import Link from "next/link";
-import Image from 'next/image';
 
 
 async function Mypage () {
-  const user = await getUserInfo('keimindev@gmail.com')
-  console.log(user,'user')
 
   return (
     <div className={styles.container}>
@@ -15,8 +11,8 @@ async function Mypage () {
       <div>back</div>
       </Link>
       <div className={styles.profileBox}>
-        <div><Image src={user.image} alt="profileImg" width={40} height={40}/></div>
-        <div>{user.username}</div>
+        <div>image</div>
+        <div>min</div>
       </div>
        <div className={styles.logoutBox}>
           <form action = {handleGithubLogOut}>
