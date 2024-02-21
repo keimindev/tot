@@ -5,13 +5,16 @@ import styles from "./page.module.css";
 import { useRecoilState } from "recoil";
 import { sectionState } from "@/recoil/sectionAtom";
 
+
+
 const Section = () => {
   const list = [
-    { id: 1, content: "📚 독서 시간을 기록해보세요", category: "reading" },
-    { id: 2, content: "📝 공부 시간을 기록해보세요", category: "study" },
-    { id: 3, content: "🏋🏻 운동 시간을 기록해보세요", category: "workout" },
-    { id: 4, content: "👩🏻‍🍳 요리 시간을 기록해보세요", category: "cook" },
+    { id: 1, content: "📚 독서 시간을 기록해보세요", category: "Reading" },
+    { id: 2, content: "📝 공부 시간을 기록해보세요", category: "Study" },
+    { id: 3, content: "🏋🏻 운동 시간을 기록해보세요", category: "Workout" },
+    { id: 4, content: "👩🏻‍🍳 요리 시간을 기록해보세요", category: "Cook" },
   ];
+
 
   const [section, setSection] = useRecoilState(sectionState)
 
@@ -22,7 +25,7 @@ const Section = () => {
         return (
           <>
          
-          <div className={styles.categoryLine} onClick={() => console.log(item.category)}>
+          <div key={item.category} className={styles.categoryLine} onClick={() => setSection(item.category)}>
           <Link href="/stopwatch"> {item.content} </Link>
           </div>
          

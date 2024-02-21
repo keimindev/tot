@@ -4,13 +4,11 @@ import TimeRecord from "@/components/record/time-record";
 import { auth } from "@/lib/auth";
 import LoginPage from "./auth/login/page";
 import { handleGithubLogOut } from "@/lib/data";
-import { getUserInfo } from "@/lib/data";
 import Main from "@/components/main/main";
 
 
 export default async function Home() {
   const session = await auth();
-  const userInfo = await getUserInfo(session?.user?.email);
 
   return (
     <main className={styles.container}>

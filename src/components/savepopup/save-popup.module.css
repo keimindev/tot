@@ -53,6 +53,10 @@
     gap: 10px;
 }
 
+.todaySections{
+    margin: 0px 0 10px 0;
+}
+
 .cate{
     padding: 5px 10px;
     background-color: var(--text);

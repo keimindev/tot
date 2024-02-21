@@ -29,6 +29,7 @@ export const { handlers : {GET,POST}, auth, signIn, signOut } = NextAuth({
                 ConnectToDb()
                 try {
                     const user = await User.findOne({ email: profile.email })
+                   
 
                     if(!user){
                         const newUser = new User({

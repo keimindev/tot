@@ -172,6 +172,11 @@ export const getSectionRecordByMonth = async (year, month) => {
           totalTime: 1,
         },
       },
+      {
+        $sort: {
+          totalTime: -1 // totalTime를 기준으로 내림차순 정렬
+        }
+      }
     ]);
     
     revalidatePath('/');
@@ -184,7 +189,6 @@ export const getSectionRecordByMonth = async (year, month) => {
 
 // 오늘 기록 불러오기
 export const getRecordsByToday = async(year,month,day) => {
-  console.log(year,month,day)
   try {
     ConnectToDb();
 

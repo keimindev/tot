@@ -12,6 +12,9 @@ const TimeRecord = async () => {
   const currentDay = today.getDate()
    
   const record = await getRecordsByToday(currentYear, currentMonth, currentDay);
+  console.log(record[0].dayRecord[0].section, 'tttt')
+  console.log(record, '^^^^^^^^^')
+
   const totalRecordTime = await getTotalTime(currentYear, currentMonth);
   const totalTodayTime = await getTodayTotalTime(currentYear, currentMonth, currentDay);
   const totalSectionTimeByMonth = await getSectionRecordByMonth(currentYear, currentMonth);
@@ -22,26 +25,17 @@ const TimeRecord = async () => {
           <div className={styles.totalCount}>Total {formatTimeClock(totalTodayTime)}</div>
           <div className={styles.innerBox}>
             {record.length === 0 ?  <div className={styles.nothingBox}>오늘 기록된 시간이 없습니다.</div>  :
-             record?.map((content) => {
-             return(
-              <>     
-            {isToday(new Date()) === `${content.month} ${content.day} ${content.year}` && (
-            <div className={styles.recordTimeBox}>
-                {content.dayRecord.map((item) => {
-                  return (
+             record[0].dayRecord.map((item) => {
+                return (
                    <>
                    <div className={styles.recordBox}>
                     <div className={styles.section}>{item.section}</div>
                     <div>{formatTimeClock(item.time)}</div>
-                    </div>
+                  </div>
                    </>
-                  )})}</div>)
-                }
-               </>
-    );
-  })}</div>
-
-             <div className={styles.sessionbox}>
+                )})}
+          </div>
+         <div className={styles.sessionbox}>
          <h2>Feburary 2024</h2>
          <div className={styles.totalCount}>Total {formatTimeClock(totalRecordTime)}</div>
          <div className={styles.sessionInnerbox}>
