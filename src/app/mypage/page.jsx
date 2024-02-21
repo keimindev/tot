@@ -25,6 +25,7 @@ async function Mypage () {
         </div>
         {/* <div className={styles.yearBox}>이번년도 진행상황</div> */}
         <div className={styles.lastMonthBox}>지난 달 기록</div>
+         {/* <div className={styles.title}>T.O.T v.1.0.0</div> */}
         <div className={styles.footer}>
          Copyrightⓒ2024 MIN All rights reserved.
         </div>

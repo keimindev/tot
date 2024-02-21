@@ -1,8 +1,9 @@
 
+import { redirect } from "next/navigation";
 import { signOut , signIn } from "./auth";
 import { ConnectToDb } from "./connectToDB"
 import { Record, User } from "./models";
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 
 export const getRecords = async () => {
 
@@ -136,7 +137,6 @@ export const getRecordsByMonth = async (year,month) => {
     ]);
 
     revalidatePath('/');
-    // console.log(recordsByDayAndSection[0]);
     return recordsByDayAndSection;
   } catch (error) {
     console.error(error);
@@ -180,7 +180,6 @@ export const getSectionRecordByMonth = async (year, month) => {
     ]);
     
     revalidatePath('/');
-    console.log(recordsByMonthAndSection);
     return recordsByMonthAndSection;
   } catch (error) {
     console.error(error);
@@ -245,8 +244,10 @@ export const getRecordsByToday = async(year,month,day) => {
       },
     ]);
 
+   
     revalidatePath('/');
     return recordsByDayAndSection;
+  
   } catch (error) {
     console.error(error);
   }
@@ -264,7 +265,6 @@ export const getUserInfo = async (name) => {
     }
 
 }
-
 
 export const handleGithubLogin = async () => {
     "use server"

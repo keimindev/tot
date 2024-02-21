@@ -32,6 +32,7 @@ export async function postRecord(req) {
 const SavePopup = ({setOpen, time, setTime, setStartTime}) => {
   const router = useRouter();
   const sectionofrecord = useRecoilValue(sectionState)
+  
   //user
   const userInfo = useRecoilValue(getUserInfoState)
 
@@ -64,10 +65,8 @@ const SavePopup = ({setOpen, time, setTime, setStartTime}) => {
             <div className={styles.btnBox}>
                 <div onClick={() => setOpen(false)}
                  className={styles.btn}>cancel</div>
-                 <div>or</div>
                 <div onClick={addRecord}
                  className={styles.btn}>save</div>
-               
             </div>
         </div>
     )

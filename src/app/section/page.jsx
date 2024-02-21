@@ -24,8 +24,7 @@ const Section = () => {
       {list.map((item) => {
         return (
           <>
-         
-          <div key={item.category} className={styles.categoryLine} onClick={() => setSection(item.category)}>
+          <div key={item.content} className={styles.categoryLine} onClick={() => setSection(item.category)}>
           <Link href="/stopwatch"> {item.content} </Link>
           </div>
          
