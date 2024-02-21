@@ -10,7 +10,6 @@
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-
 	padding-top: 200px;
   }
 
@@ -70,7 +69,14 @@
 	  max-width: 425px;
 	  /* height: 876px; */
 	  height: 100vh;
-	  padding-top: 250px;
+	  padding-top: 180px;
+	}
+
+	.innerbox{
+		width: 250px;
+		height: 250px;
+		line-height: 250px;
+	
 	}
 
   }

@@ -1,9 +1,8 @@
 .container{
-    max-width: 425px;
-    width: 425px;
+    /* max-width: 400px; */
+    width: 400px;
     padding: 30px 15px;
 }
-
 
 
 .userinfo{
@@ -86,3 +85,14 @@
 .session{
     margin-top: 30px;
 }
+
+
+
+
+/* Responsive design for mobile view */
+@media (max-width: 600px) {
+    .container {
+      max-width: 380px;
+      padding: 10px;
+    }
+  }
