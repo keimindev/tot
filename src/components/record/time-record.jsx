@@ -12,20 +12,17 @@ const TimeRecord = async () => {
   const currentDay = today.getDate()
    
   const record = await getRecordsByToday(currentYear, currentMonth, currentDay);
-  console.log(record[0].dayRecord[0].section, 'tttt')
-  console.log(record, '^^^^^^^^^')
-
   const totalRecordTime = await getTotalTime(currentYear, currentMonth);
   const totalTodayTime = await getTodayTotalTime(currentYear, currentMonth, currentDay);
   const totalSectionTimeByMonth = await getSectionRecordByMonth(currentYear, currentMonth);
 
   return(
         <div className={styles.container}>
-          <h2>Todays session</h2>
+          <h3>Today&apos;s session</h3>
           <div className={styles.totalCount}>Total {formatTimeClock(totalTodayTime)}</div>
           <div className={styles.innerBox}>
             {record.length === 0 ?  <div className={styles.nothingBox}>오늘 기록된 시간이 없습니다.</div>  :
-             record[0].dayRecord.map((item) => {
+             record[0].dayRecord.sort((a,b) => b.time - a.time).map((item) => {
                 return (
                    <>
                    <div className={styles.recordBox}>
@@ -36,7 +33,7 @@ const TimeRecord = async () => {
                 )})}
           </div>
          <div className={styles.sessionbox}>
-         <h2>Feburary 2024</h2>
+         <h3>{isToday(new Date())}</h3>
          <div className={styles.totalCount}>Total {formatTimeClock(totalRecordTime)}</div>
          <div className={styles.sessionInnerbox}>
           {totalSectionTimeByMonth.map((item) => {

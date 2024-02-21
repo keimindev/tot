@@ -2,7 +2,6 @@
 
 import { formatTimeClock } from "@/utils/formatTime";
 import styles from "./save-popup.module.css";
-import { useState } from "react";
 import { useRouter } from 'next/navigation';
 import { useRecoilValue } from "recoil";
 import { sectionState } from "@/recoil/sectionAtom";
@@ -33,9 +32,6 @@ export async function postRecord(req) {
 const SavePopup = ({setOpen, time, setTime, setStartTime}) => {
   const router = useRouter();
   const sectionofrecord = useRecoilValue(sectionState)
-  console.log(sectionofrecord, 'force')
-  // const [section, setSection] = useState(sectionofrecord)
-
   //user
   const userInfo = useRecoilValue(getUserInfoState)
 

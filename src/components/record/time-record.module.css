@@ -31,6 +31,7 @@
     font-weight: bold;
     margin-bottom: 20px;
     text-align: end;
+    font-size: 15px;
 }
 
 .innerBox{
@@ -71,6 +72,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 8px 0 8px 0;
 }
 
 .section{
