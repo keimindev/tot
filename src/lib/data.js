@@ -1,9 +1,7 @@
-
-import { redirect } from "next/navigation";
 import { signOut , signIn } from "./auth";
 import { ConnectToDb } from "./connectToDB"
 import { Record, User } from "./models";
-import { revalidatePath, revalidateTag } from "next/cache";
+import { revalidatePath } from "next/cache";
 
 export const getRecords = async () => {
 
