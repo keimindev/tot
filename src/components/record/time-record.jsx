@@ -2,6 +2,7 @@ import styles from "./time-record.module.css";
 import { formatTimeClock } from "@/utils/formatTime";
 import { isToday } from "@/utils/formatDay";
 import { getTotalTime, getRecordsByToday, getTodayTotalTime,getSectionRecordByMonth } from "@/lib/data";
+import MonthlyRecord from "../monthlyrecord/monthly-record";
 
 export const dynamic = 'force-dynamic'; 
 const TimeRecord = async () => {
@@ -32,19 +33,7 @@ const TimeRecord = async () => {
                    </>
                 )})}
           </div>
-         <div className={styles.sessionbox}>
-         <h3>{isToday(new Date())}</h3>
-         <div className={styles.totalCount}>Total {formatTimeClock(totalRecordTime)}</div>
-         <div className={styles.sessionInnerbox}>
-          {totalSectionTimeByMonth.map((item) => {
-            return (
-              <>
-              <div className={styles.seesion}><p>{item.section}</p><p>{formatTimeClock(item.totalTime)}</p></div>
-              </>
-            )
-          })}
-         </div>
-      </div>
+         <MonthlyRecord totalTime={totalRecordTime} data={totalSectionTimeByMonth} />
         </div>
     )
 }

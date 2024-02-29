@@ -81,36 +81,9 @@
     background-color: #F4EBDB;
     border-radius: 20px;
     color: var(--bg);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
-
-/* session box */
-.sessionbox{
-    margin-top:30px;
-    padding-bottom: 50px;
-}
-
-.sessionInnerbox{
-    padding-top: 10px;
-    margin-left: 10%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, minmax(100px, auto));
-    gap: 10px;
-}
-
-.seesion{
-    width: 130px;
-    height: 130px;
-    background-color: var(--btn);
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
