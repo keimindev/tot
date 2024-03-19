@@ -31,10 +31,10 @@ async function Mypage () {
         <Profile />
         <div className={styles.lastMonthBox}>지난 달 기록</div>
         <div className={styles.sessionbox}>
-         <h3>{prevMonth != '' ? getLastMonth(prevMonth) : isToday(new Date())}</h3>
+         <h3>{prevMonth != undefined ? getLastMonth(prevMonth) : isToday(new Date())}</h3>
          <div className={styles.totalCount}>Total {formatTimeClock(totalRecordTime)}</div>
          <div className={styles.sessionInnerbox}>
-          {totalSectionTimeByMonth.map((item) => {
+          {totalSectionTimeByMonth?.map((item) => {
             return (
               <>
               <div className={styles.seesion}><p>{item.section}</p><p>{formatTimeClock(item.totalTime)}</p></div>
