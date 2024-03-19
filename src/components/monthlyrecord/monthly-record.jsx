@@ -5,7 +5,7 @@ import { formatTimeClock } from '@/utils/formatTime';
 function MonthlyRecord({totalTime, data, month}) {
   return (
     <div className={styles.sessionbox}>
-         <h3>{month != '' ? getLastMonth(month) : isToday(new Date())}</h3>
+         <h3>{month != undefined ? getLastMonth(month) : isToday(new Date())}</h3>
          <div className={styles.totalCount}>Total {formatTimeClock(totalTime)}</div>
          <div className={styles.sessionInnerbox}>
           {data.map((item) => {

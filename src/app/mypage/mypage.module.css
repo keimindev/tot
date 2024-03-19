@@ -48,8 +48,58 @@
 
 
 .lastMonthBox{
+  width: 90%;
   margin-top: 50px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.6);
+  color: var(--bg);
+  font-weight: bold;
+  padding: 10px 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
+
+
+.sessionbox{
+  width: 100%;
+  padding: 30px 30px;
+}
+
+.sessionInnerbox{
+  padding-top: 10px;
+  margin-left: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(100px, auto));
+  gap: 10px;
+}
+
+.seesion{
+  width: 130px;
+  height: 130px;
+  background-color: var(--btn);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.totalCount{
+  color: var(--text);
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: end;
+  font-size: 15px;
+}
+
   
 
 /* Responsive design for mobile view */

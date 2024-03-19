@@ -4,7 +4,8 @@ import { handleGithubLogOut } from "@/lib/data";
 import Link from "next/link";
 import MonthlyRecord from "@/components/monthlyrecord/monthly-record";
 import { getTotalTime, getSectionRecordByMonth } from "@/lib/data";
-
+import { getLastMonth } from "@/utils/formatDay";
+import { formatTimeClock } from '@/utils/formatTime';
 
 async function Mypage () {
 
@@ -31,9 +32,20 @@ async function Mypage () {
         <Profile />
         {/* <div className={styles.yearBox}>이번년도 진행상황</div> */}
         <div className={styles.lastMonthBox}>지난 달 기록</div>
-        <MonthlyRecord totalTime={totalRecordTime} data={totalSectionTimeByMonth} month={prevMonth}/>
-        {/* <div>캘린더</div> */}
-         {/* <div className={styles.title}>T.O.T v.1.0.0</div> */}
+        {/* <MonthlyRecord totalTime={totalRecordTime} data={totalSectionTimeByMonth} month={prevMonth}/> */}
+        <div className={styles.sessionbox}>
+         <h3>{prevMonth != '' ? getLastMonth(prevMonth) : isToday(new Date())}</h3>
+         <div className={styles.totalCount}>Total {formatTimeClock(totalRecordTime)}</div>
+         <div className={styles.sessionInnerbox}>
+          {totalSectionTimeByMonth.map((item) => {
+            return (
+              <>
+              <div className={styles.seesion}><p>{item.section}</p><p>{formatTimeClock(item.totalTime)}</p></div>
+              </>
+            )
+          })}
+         </div>
+    </div>
         <div className={styles.footer}>
          Copyrightⓒ2024 MIN All rights reserved.
         </div>
