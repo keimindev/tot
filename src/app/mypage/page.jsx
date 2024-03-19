@@ -29,9 +29,7 @@ async function Mypage () {
         </div>
         </div>
         <Profile />
-        {/* <div className={styles.yearBox}>이번년도 진행상황</div> */}
         <div className={styles.lastMonthBox}>지난 달 기록</div>
-        {/* <MonthlyRecord totalTime={totalRecordTime} data={totalSectionTimeByMonth} month={prevMonth}/> */}
         <div className={styles.sessionbox}>
          <h3>{prevMonth != '' ? getLastMonth(prevMonth) : isToday(new Date())}</h3>
          <div className={styles.totalCount}>Total {formatTimeClock(totalRecordTime)}</div>
