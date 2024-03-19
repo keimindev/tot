@@ -1,8 +1,7 @@
 import Profile from "@/components/profile/profile";
-import styles from "./mypage.module.css";
+import styles from "./page.module.css";
 import { handleGithubLogOut } from "@/lib/data";
 import Link from "next/link";
-import MonthlyRecord from "@/components/monthlyrecord/monthly-record";
 import { getTotalTime, getSectionRecordByMonth } from "@/lib/data";
 import { getLastMonth } from "@/utils/formatDay";
 import { formatTimeClock } from '@/utils/formatTime';
