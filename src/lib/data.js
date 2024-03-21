@@ -255,7 +255,7 @@ export const getUserInfo = async (name) => {
     try {
       ConnectToDb();
         const user = await User.findOne({email : name})
-        revalidatePath('/')
+        //revalidatePath('/')
         return user
       
     } catch (error) {

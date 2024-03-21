@@ -1,6 +1,5 @@
 import styles from "./time-record.module.css";
 import { formatTimeClock } from "@/utils/formatTime";
-import { isToday } from "@/utils/formatDay";
 import { getTotalTime, getRecordsByToday, getTodayTotalTime,getSectionRecordByMonth } from "@/lib/data";
 import MonthlyRecord from "../monthlyrecord/monthly-record";
 

@@ -6,6 +6,8 @@ import { getTotalTime, getSectionRecordByMonth } from "@/lib/data";
 import { getLastMonth } from "@/utils/formatDay";
 import { formatTimeClock } from '@/utils/formatTime';
 
+export const dynamic = 'force-dynamic'; 
+
 async function Mypage () {
 
   // 년도 달 구하기 
