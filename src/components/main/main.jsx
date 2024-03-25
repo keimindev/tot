@@ -10,12 +10,13 @@ const Main = ({user}) => {
          <p>Welcome to</p>
          {/* <p>Your time is 00000 hr</p> */}
       </div>
+      {user.email === 'guest' ? <div></div> : 
       <Link href="/mypage">
       <div className={styles.userinfobox}>
          <p>{user.name} </p>
          <p className={styles.userImg}><Image src={user.image} alt="profile img" width={30} height={30}/></p>
       </div>
-      </Link>
+      </Link>}
       </div>
       <div className={styles.timerbox}>
       <div>⏰ Tracking Time</div>

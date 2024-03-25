@@ -62,12 +62,21 @@ const SavePopup = ({setOpen, time, setTime, setStartTime}) => {
               {sectionofrecord === 'Cook' && <h3>요리</h3>}
             <div className={styles.time}>{formatTimeClock(time)}</div>
             </div>
+            {userInfo.username === 'guest' ? 
+            <div>
+              <div>If you want to save your record, Join us!</div>
+              <div>
+              <div>Back to Home</div>
+              <div>Login</div>
+              </div>
+              </div> : 
             <div className={styles.btnBox}>
                 <div onClick={() => setOpen(false)}
                  className={styles.btn}>cancel</div>
                 <div onClick={addRecord}
                  className={styles.btn}>save</div>
             </div>
+            }
         </div>
     )
 }

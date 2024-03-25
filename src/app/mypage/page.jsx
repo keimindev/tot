@@ -31,7 +31,7 @@ async function Mypage () {
         </div>
         </div>
         <Profile />
-        <div className={styles.lastMonthBox}>지난 달 기록</div>
+        <div className={styles.lastMonthBox}>Last month records</div>
         <div className={styles.sessionbox}>
          <h3>{prevMonth != undefined ? getLastMonth(prevMonth) : isToday(new Date())}</h3>
          <div className={styles.totalCount}>Total {formatTimeClock(totalRecordTime)}</div>

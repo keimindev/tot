@@ -1,0 +1,13 @@
+
+.guestBtn{
+    margin-top: 30px;
+    cursor: pointer;
+
+    background-color: transparent;
+    border: none;
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-position: below;
+
+
+}

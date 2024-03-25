@@ -272,6 +272,23 @@ export const handleGithubLogin = async () => {
 
 export const handleGithubLogOut = async () => {
     "use server"
-    await signOut("github")
+    await signOut()
   }
 
+
+  // login
+  export const handleGuestLogin = async () => {
+    'use server'
+
+    try {
+      await signIn("credentials", { username : "guest" });
+    } catch (err) {
+      console.log(err);
+  
+      if (err.message.includes("CredentialsSignin")) {
+        return { error: "Invalid username or password" };
+      }
+      throw err;
+    }
+  
+  }

@@ -8,12 +8,14 @@ import Main from "@/components/main/main";
 export default async function Home() {
   const session = await auth();
 
+  console.log(session, 'seeeeeee')
+
   return (
     <main className={styles.container}>
       {session?.user ? (
         <div>
           <Main user={session.user} />
-          <TimeRecord />
+          <TimeRecord user={session.user}/>
         </div>
       ) : (
         <LoginPage />
