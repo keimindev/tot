@@ -9,10 +9,10 @@ import { sectionState } from "@/recoil/sectionAtom";
 
 const Section = () => {
   const list = [
-    { id: 1, content: "📚 독서 시간을 기록해보세요", category: "Reading" },
-    { id: 2, content: "📝 공부 시간을 기록해보세요", category: "Study" },
-    { id: 3, content: "🏋🏻 운동 시간을 기록해보세요", category: "Workout" },
-    { id: 4, content: "👩🏻‍🍳 요리 시간을 기록해보세요", category: "Cook" },
+    { id: 1, content: "📚 Record your reading time", category: "Reading" },
+    { id: 2, content: "📝 Record your study time", category: "Study" },
+    { id: 3, content: "🏋🏻 Record your workout time", category: "Workout" },
+    { id: 4, content: "👩🏻‍🍳 Record your cooking time", category: "Cook" },
   ];
 
 
@@ -20,7 +20,7 @@ const Section = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>오늘의 기록을 측정해보세요!</div>
+      <div className={styles.title}>Let&apos;s record your day!</div>
       {list.map((item) => {
         return (
           <>
