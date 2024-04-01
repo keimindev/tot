@@ -12,12 +12,20 @@ const TimeRecord = async ({user}) => {
   const currentYear = today.getFullYear();
   const currentMonth = today.getMonth() + 1
   const currentDay = today.getDate()
-   
-  const record = await getRecordsByToday(currentYear, currentMonth, currentDay);
+
+  let day = '';
+  if(currentDay < 10){
+    day = `0${currentDay}`
+  }else{
+    day = currentDay
+  }
+
+  const record = await getRecordsByToday(currentYear, currentMonth, day);
   const totalRecordTime = await getTotalTime(currentYear, currentMonth);
   const totalTodayTime = await getTodayTotalTime(currentYear, currentMonth, currentDay);
   const totalSectionTimeByMonth = await getSectionRecordByMonth(currentYear, currentMonth);
 
+  
   return(
         <div className={styles.container}>
           <h3>Today&apos;s session</h3>

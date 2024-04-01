@@ -13,6 +13,7 @@ const Section = () => {
     { id: 2, content: "📝 Record your study time", category: "Study" },
     { id: 3, content: "🏋🏻 Record your workout time", category: "Workout" },
     { id: 4, content: "👩🏻‍🍳 Record your cooking time", category: "Cook" },
+    { id: 5, content: "🎨 Record your drawing time", category: "Draw" },
   ];
 
 
