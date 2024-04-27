@@ -8,8 +8,6 @@ import Main from "@/components/main/main";
 export default async function Home() {
   const session = await auth();
 
-  console.log(session, 'seeeeeee')
-
   return (
     <main className={styles.container}>
       {session?.user ? (

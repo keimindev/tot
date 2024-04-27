@@ -6,7 +6,7 @@ const LoginButton = () => {
    
   return (
     <form action = {handleGuestLogin}>
-    <button className={styles.guestBtn}>Browsing as a guest</button>
+    <button className={styles.guestBtn}>Guest Mode</button>
     </form>
   )
 }
