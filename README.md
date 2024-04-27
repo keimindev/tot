@@ -1,21 +1,37 @@
 
-# T.O.T (Trace of Time)
+# [T.O.T (Trace of Time)](https://tot-web.vercel.app/)
+하루에 독서를 얼마나 했는지, 공부는 얼마나 했는지 시간을 기록하고 한 달 동안 어떤 일을 얼마나 했는지 확인할 수 있는 시간 기록장. 
 
-### ✍🏻Summary
-매일 30분씩 책 읽기를 하는 중인데 기존에 사용중인 북어플로 시간을 측정하면 한 달 혹은 일주일 독서 시간을 확인하기 힘들고 원서를 주로 읽어야하는 불편함이 있어서 나만의 기록장을 만들기로 함.
+
+### ✍🏻 Project Overview
+**루틴을 만들고 싶어서 만들기 시작한 시간 기록장**
+
+매일 `30분씩 독서`를 루틴으로 만들려고 노력 중인데 기존에 사용중인 북어플로 시간을 측정하면 한 달 혹은 일주일 독서 시간을 확인하기 힘들고 원서를 주로 읽어야하는 불편함이 있어서 나만의 기록장을 만들기로 결심.
+
+‘독서’를 할 때 사용하기 때문에 다른 섹션 추가 없이 version1 개발을 끝내는 것이 목표였고 `Nextjs`를 이용해서 서버까지 빠르게 구축하고자 하였습니다. 추후, 기록장을 캘린더 형식으로 구현하고 ‘독서’말고도 자유로운 섹션을 추가해서 시간을 기록할 수 있게 디벨롭 할 예정입니다.
+
 <br/>
-<br/>
+
 
 ### ⚡️key features
 - 스톱워치
 - 웗 별 활동 총량 기록
 - 섹션별 시간 기록
 - 로그인 (github계정)
+
 <br/>
+
+### 🛠️Tech tool
+- Nextjs
+- mongoDB
+- Recoil
+- vercel(deploy)
+
 <br/>
 
 ### ✨UI
-초창기 ui 인데 스톱워치를 활용해서 기록하는 것으로 단순하게 디자인. <br/>
+
+- 초창기 ui 인데 스톱워치를 활용해서 기록하는 것으로 단순하게 디자인. <br/>
 <br/>
 <span><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FduTUkE%2FbtsDApVHZm2%2FYDoK9ytTO57oYSBk7IoF1K%2Fimg.png" alt="prev1" width="287"/>
 </span>
@@ -24,21 +40,71 @@
 <br/>
 <br/>
 
-하지만 사용하면서 불편한 점이 있고, '독서'말고도 다른 활동들도 기록하고 싶어서 ui 변경 진행 중 <br/>
-메인 페이지에서 이번 달 & 오늘 섹션별로 기록된 시간을 확인할 수 있고, 마이페이지를 따로 개설해서 지난 달의 기록을 확인할 수 있게 수정 - 
-마이페이지 ui는 디벨롭 예정
+- 사용하면서 불편함을 느낌
+- '독서'말고도 다른 활동들도 기록하고 싶어서 ui 변경
+- 메인 페이지에서 이번 달 & 오늘 섹션별로 기록된 시간을 확인 가능
+- 마이페이지를 따로 개설해서 지난 달의 기록을 확인할 수 있게 수정
+- 마이페이지 ui는 디벨롭 예정
+
+
 <br/>
 
-<span><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmmL6E%2FbtsE0klejwU%2FdSa6tLWb8ZVVeTWRJ9KWYK%2Fimg.png" alt="cur1" width="300"/></span>
-<span><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbi0f7q%2FbtsE3qFfeIe%2FTvHOCUNl0s1C5PLPYzJcnK%2Fimg.png" alt="cur2" width="301"/></span>
-<span><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdwEYrp%2FbtsEZl54ZsK%2FizMMkBDeKDOoUqMmhfsF9K%2Fimg.png" alt="cur3" width="298"/></span>
-<br/>
+<span><img src="https://file.notion.so/f/f/96e7333d-e3eb-4133-91d5-3d2d497146d3/7a7ea68a-709c-4347-b29a-d29f54764019/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.36.06.png?id=b018b906-3fbf-454a-8b5f-0ccb5f8f09fc&table=block&spaceId=96e7333d-e3eb-4133-91d5-3d2d497146d3&expirationTimestamp=1714298400000&signature=Y2pbvE9pP624g9abG167DLusZx6WViF7nLxdPT8SMgc&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-04-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+3.36.06.png" alt="cur" width="900"/></span>
+
 <br/>
 
-### 🛠️Tech tool
-- Nextjs
-- mongoDB
-- vercel(deploy)
+
+### Self-service Challenge
+- 스택을 정하는 준비단계 <br/>
+시간 기록장을 만들기로 기획하며 이를 위해 서버측 구현을 혼자 해야 하는 도전이 있었습니다. <br/>
+초기에는 React만을 사용하여 시작하면 REST API를 구현하기 위해 Node.js를 사용해야 할 것으로 생각되었고, 이로 인해 빌드에 시간이 소요될 것으로 예상했습니다. 업무에서 사용했던 Next.js를 이용하여 빌드하면 API route를 통해 다른 백엔드 프레임워크의 도움 없이도 구현할 수 있을 것으로 판단하여, 완벽하게 이해하지 못하더라도 Next.js를 사용하여 빌드하기로 결정하고 시작했습니다. Next.js에 대한 지식이 어느 정도 있다고 생각했지만, 실제로는 React 코드 이외에는 제대로 알지 못하는 것을 깨달았고, 공식 문서를 참고하여 정보를 찾는 것이 가장 효율적인 방법임을 깨달았습니다.<br/>
+
+- 사용자 가치에 대하여 <br/>
+나 혼자 사용할 시간 기록장을 만들기 위해 거창한 디자인은 필요하지 않다고 생각하여 간단한 와이어프레임을 그리고 필수 기능을 정리한 후 개발을 시작했습니다. 처음에는 단순히 기능을 빠르게 구현하고자했고 그렇게 빌드된 웹 어플리케이션을 실제로 사용해 보니 몇 가지 불편한 점이 발견되었습니다. 실제 사용자의 입장에서 고려해야 할 요소들이 있었기 때문에 기능뿐만 아니라 디자인적인 측면도 고려해야 했습니다. 다시 사용자의 입장에서 추가되었으면 하는 페이지와 기능을 기획하고 개발하는 과정을 거쳤습니다. 깔끔한 코드도 중요하지만, 무엇보다도 사용자가 가치를 느낄 수 있는 기능을 제공하는 것이 중요하다는 것을 깨달았습니다. 이 프로젝트를 통해 개발 이외의 측면을 고려해 볼 수 있는 기회를 가졌습니다. <br/>
+
 <br/>
 
-[T.O.T 디벨롭 기록 노트](https://minproject.notion.site/T-O-T-Trace-Of-Time-65ac966964b4441085847317cb9d6b49?pvs=4)
+### ☄️트러블슈팅
+- **QA가 중요하다 스톱워치 동작 버그발견🐞**  <br/>
+    - 첫 스톱워치 동작 구현 때 setInterval을 이용해서 1000 초간격으로 시간을 체크했는데 실제로 시간이 흐르는 것과는 차이가 있음. 처음에는 똑같이 흐르는 듯 했지만 2분대를 지나가기 시작하면서 시간을 재는 속도가 현저히 느려짐. 실제로 40분 이상 독서를 했는데 스톱워치는 30분도 되지 않은 시간을 기록함.
+    - [`performance.now()`](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now) 라는 method를 사용하는 것으로 변경
+        - `performance.now()`는 현재 시간을 나타내는 web api로 밀리초(1/1000초)보다 더 작은 해상도를 가지고 있어서 정밀한 시간 측정이 가능. 성능측정, 시간 경과 계산할 때 사용할 수 있음. 두 개의 `performance.now()` 호출을 비교하면 두 호출 사이의 시간 경과를 계산할 수 있기 때문에 이부분을 스톱워치에 이용함.
+        - `date.now()`를 사용하라는 글도 있었는데, 공식문서에 따르면 `Date.now()`는 시스템 및 사용자 시계 조정 등에 영향을 받을 수 있다고함. 왜냐하면 `Date.now()`는 Unix 에폭 (1970-01-01T00:00:00Z)을 기준으로 하며 시스템 시계에 의존하기 때문. 반면 `performance.now()` 는 `timeOrigin` 속성을 기준으로 하며, 이 속성은 단조로운 시계라고 함. 따라서 `performance.now()`의 현재 시간은 절대로 감소하지 않으며 조정의 영향을 받지 않는다고 함. (공식문서 참조바람)
+
+<br/>
+
+- **전역상태관리가 필요하다 - Nextjs14 와 사용하는 Recoil** <br/>
+    
+    처음 디자인 없이 기능만 덧붙여서 빠르게 만들었을 때는 페이지 라우팅을 할 일이 없었는데, 디자인을 수정하면서 파일 시스템 기반의 static routing을 해야했고 그 이유로 데이터를 전역으로 관리해야 했다. 처음 써보는 recoil. 무작정 공식문서부터 읽어내려갔는데 코드가 정말 간단했다.  데이터를 한 곳에서 관리해서 전역으로 보낼 수만 있으면 된다는 생각으로 recoil을 선택했는데 redux에 익숙한 나에게 recoil은 useState를 쓰는마냥 편하게 느껴졌다. 하지만 그게 다가 아니였다. nextjs 에서 recoil을 사용하려면 ‘use client’가 필요하다.
+    
+    - client component로 만들어진 상황에서 recoil을 쓸 수 있다. 
+    `use client` 을 사용해서 컴포넌트를 client component로 변경해주고 코드를 더 해주면 된다. 문제는 서버 컴포넌트로 사용되야 할 페이지랑 같이 쓸 수가 없다는 것. 따로 컴포넌트를 분리해서 따로 생성해주고 그 곳에 import 하는 식으로 해야 정상적으로 동작한다. <br/>
+
+<br/>
+
+- **정적렌더링 빌드오류를 동적렌더링으로 우회로 해결** <br/>
+    
+    전월 시간 기록을 확인할 수 있는 공간을 만들기 위해서 my page를 만들었다. 
+    
+    서버에 저장되어있는 데이터를 가져오기 위해서 이미 만들어져있던 데이터 호출 코드들을 그대로 재활용해서 진행을 했는데 빌드만 하면 계속해서 오류가 났다. 
+    
+    데이터를 불러올 때 호출한게 서버API를 따로 만든게 아니라 nextjs가 지원하는 api route를 이용해서 구현했었다. (API 라우트를 사용하면 Next.js 어플리케이션에서 외부 데이터를 가져오거나 데이터베이스와 상호작용할 수 있다)
+    
+    결과적으로 nextjs 렌더링에 대한 이해력이 떨어졌던게 문제였던 것 같다. 
+    
+    - Nextjs 서버 렌더링
+    
+    nextjs가 지원하는 서버 렌더링에는 총 3가지가 있는데, 첫번째 Static (정적), 두번째 dynamic(동적), 세번째 Streaming 이다. 
+    
+    `정적 렌더링이 기본값`인데, 라우트가 빌드 시간에 렌더링되거나 데이터 재검증 후에 백그라운드에서 렌더링된다. 결과는 캐시되어 콘텐츠 전송 네트워크(CDN)에 푸시할 수 있고 이 최적화를 통해 렌더링 작업의 결과를 사용자와 서버 요청 간에 공유할 수있다고 한다. 정적 렌더링은 라우트에 사용자에게 맞춤화되지 않은 데이터가 있고 빌드 시간에 알 수 있는 경우, 정적블로그나 제품 페이지에 사용하는게 유용하다.
+    
+    `동적 렌더링`에서는 라우트가 각 사용자에게 요청 시간에 렌더링된다. 동적 렌더링은 라우트에 사용자에게 맞춤화된 데이터가 있는 경우 또는 요청 시간에만 알 수 있는 정보가 있는 경우에 유용. 이는 쿠키나 URL의 검색 매개변수와 같은 경우이다. 동적 함수나 캐시되지 않은 데이터 요청이 발견되면 Next.js는 라우트 전체를 동적으로 렌더링하도록 전환한다.
+  
+   - 정적인 렌더링을 동적인 렌더링으로!
+<div align="center">
+<img src="https://file.notion.so/f/f/96e7333d-e3eb-4133-91d5-3d2d497146d3/72e43236-1778-4346-b55c-469f39781240/dynamic.png?id=6460db6c-3602-49f2-b1dc-c55230674733&table=block&spaceId=96e7333d-e3eb-4133-91d5-3d2d497146d3&expirationTimestamp=1714305600000&signature=KuYnWM_BA0LHiWm_G2idBZxrAYct-woHqpg6Usfw0jw&downloadName=dynamic.png" alt="img" width="500" />
+</div>
+
+터미널에 출력된 오류 내용을 분석해보면 `revalidatePath`를 쓰는 부분에 대한 이야기가 있다. revalidatePath 부분이 해당 /URL에 있던 캐시를 삭제하고 다시 생성해주는 함수로 페이지를 다시 로드 해주는 기능도 있다. 단순히 새로 고침을 하는게 아니라 변경된 점을 새로 고침해준다. `이 기능이 동적인 렌더링에 해당. 페이지는 기본 값인 정적인 렌더링이 되다보니 충돌나서 오류가 계속난 것`. 
+이 때 도와주는 것이 Route Segment 옵션이다. 레이아웃 또는 라우트 핸들러의 동작을 직접 내보내는 변수를 구성할 수 있다. 그 중에서 force-dynamic 옵션이 있는데 이 부분을 추가해서 동적 렌더링으로 우회해서 빌드 오류를 해결하였다.
+<br/>
