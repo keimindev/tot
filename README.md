@@ -1,5 +1,5 @@
 
-# [T.O.T (Trace of Time)](https://tot-web.vercel.app/){:target="_blank"}
+# [T.O.T (Trace of Time)](https://tot-web.vercel.app/)
 하루에 독서를 얼마나 했는지, 공부는 얼마나 했는지 시간을 기록하고 한 달 동안 어떤 일을 얼마나 했는지 확인할 수 있는 시간 기록장. 
 
 
@@ -101,8 +101,9 @@
     `동적 렌더링`에서는 라우트가 각 사용자에게 요청 시간에 렌더링된다. 동적 렌더링은 라우트에 사용자에게 맞춤화된 데이터가 있는 경우 또는 요청 시간에만 알 수 있는 정보가 있는 경우에 유용. 이는 쿠키나 URL의 검색 매개변수와 같은 경우이다. 동적 함수나 캐시되지 않은 데이터 요청이 발견되면 Next.js는 라우트 전체를 동적으로 렌더링하도록 전환한다.
   
    - 정적인 렌더링을 동적인 렌더링으로!
-
-![dynamic.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/96e7333d-e3eb-4133-91d5-3d2d497146d3/72e43236-1778-4346-b55c-469f39781240/dynamic.png)
+<div align="center">
+<img src="https://file.notion.so/f/f/96e7333d-e3eb-4133-91d5-3d2d497146d3/72e43236-1778-4346-b55c-469f39781240/dynamic.png?id=6460db6c-3602-49f2-b1dc-c55230674733&table=block&spaceId=96e7333d-e3eb-4133-91d5-3d2d497146d3&expirationTimestamp=1714305600000&signature=KuYnWM_BA0LHiWm_G2idBZxrAYct-woHqpg6Usfw0jw&downloadName=dynamic.png" alt="img" width="500" />
+</div>
 
 터미널에 출력된 오류 내용을 분석해보면 `revalidatePath`를 쓰는 부분에 대한 이야기가 있다. revalidatePath 부분이 해당 /URL에 있던 캐시를 삭제하고 다시 생성해주는 함수로 페이지를 다시 로드 해주는 기능도 있다. 단순히 새로 고침을 하는게 아니라 변경된 점을 새로 고침해준다. `이 기능이 동적인 렌더링에 해당. 페이지는 기본 값인 정적인 렌더링이 되다보니 충돌나서 오류가 계속난 것`. 
 이 때 도와주는 것이 Route Segment 옵션이다. 레이아웃 또는 라우트 핸들러의 동작을 직접 내보내는 변수를 구성할 수 있다. 그 중에서 force-dynamic 옵션이 있는데 이 부분을 추가해서 동적 렌더링으로 우회해서 빌드 오류를 해결하였다.
