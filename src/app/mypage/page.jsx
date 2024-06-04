@@ -4,52 +4,70 @@ import { handleGithubLogOut } from "@/lib/data";
 import Link from "next/link";
 import { getTotalTime, getSectionRecordByMonth } from "@/lib/data";
 import { getLastMonth } from "@/utils/formatDay";
-import { formatTimeClock } from '@/utils/formatTime';
+import { formatTimeClock } from "@/utils/formatTime";
+import GoalRecord from "@/components/goalRecord/goal-record";
 
-export const dynamic = 'force-dynamic'; 
+export const dynamic = "force-dynamic";
 
-async function Mypage () {
-
-  // 년도 달 구하기 
+async function Mypage() {
+  // 년도 달 구하기
   const today = new Date();
   const currentYear = today.getFullYear();
-  const prevMonth = today.getMonth()
+  const prevMonth = today.getMonth();
+  const currentMonth = today.getMonth() + 1;
 
-  const totalRecordTime = await getTotalTime(currentYear, prevMonth);
-  const totalSectionTimeByMonth = await getSectionRecordByMonth(currentYear, prevMonth);
+  const totalPrevMonthRecordTime = await getTotalTime(currentYear, prevMonth);
+  const totalSectionTimeByMonth = await getSectionRecordByMonth(
+    currentYear,
+    prevMonth
+  );
+  const totalRecordTime = await getTotalTime(currentYear, currentMonth);
 
   return (
     <div className={styles.container}>
       <div className={styles.topBox}>
-      <Link href="/">
-      <div>←</div>
-      </Link>
-       <div className={styles.logoutBox}>
-          <form action = {handleGithubLogOut}>
+        <Link href="/">
+          <div>←</div>
+        </Link>
+        <div className={styles.logoutBox}>
+          <form action={handleGithubLogOut}>
             <button className={styles.logoutBtn}>Logout</button>
           </form>
         </div>
+      </div>
+      <Profile />
+      <GoalRecord
+        currentMonthRecord={totalRecordTime}
+        prevMonthRecord={totalPrevMonthRecordTime}
+      />
+      <div className={styles.lastMonthBox}>Last month records</div>
+      <div className={styles.sessionbox}>
+        <h3>
+          {prevMonth != undefined
+            ? getLastMonth(prevMonth)
+            : isToday(new Date())}
+        </h3>
+        <div className={styles.totalCount}>
+          Total {formatTimeClock(totalPrevMonthRecordTime)}
         </div>
-        <Profile />
-        <div className={styles.lastMonthBox}>Last month records</div>
-        <div className={styles.sessionbox}>
-         <h3>{prevMonth != undefined ? getLastMonth(prevMonth) : isToday(new Date())}</h3>
-         <div className={styles.totalCount}>Total {formatTimeClock(totalRecordTime)}</div>
-         <div className={styles.sessionInnerbox}>
+        <div className={styles.sessionInnerbox}>
           {totalSectionTimeByMonth?.map((item) => {
             return (
               <>
-              <div className={styles.seesion}><p>{item.section}</p><p>{formatTimeClock(item.totalTime)}</p></div>
+                <div className={styles.seesion}>
+                  <p>{item.section}</p>
+                  <p>{formatTimeClock(item.totalTime)}</p>
+                </div>
               </>
-            )
+            );
           })}
-         </div>
-    </div>
-        <div className={styles.footer}>
-         Copyrightⓒ2024 MIN All rights reserved.
         </div>
+      </div>
+      <div className={styles.footer}>
+        Copyrightⓒ2024 MIN All rights reserved.
+      </div>
     </div>
-  )
+  );
 }
 
-export default Mypage
+export default Mypage;

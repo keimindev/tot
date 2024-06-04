@@ -1,0 +1,50 @@
+.container{
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.goalbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: var(--btn);
+    padding: 10px 10px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+
+  }
+  
+  .goalTitle{
+    padding: 5px 0px;
+    color: var(--text);
+    font-weight: bold;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+  }
+  
+  .goalHours{
+    padding: 5px 15px;
+  }
+  
+  .goalEditBtn{
+    margin-left: 20px;
+    padding: 5px 10px;
+    background-color: var(--text);
+    color: var(--bg);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .goalRecordBox{
+    margin: 15px 0 20px 0;
+
+  }
