@@ -49,7 +49,14 @@
 
 <br/>
 
-<span><img src="https://file.notion.so/f/f/96e7333d-e3eb-4133-91d5-3d2d497146d3/7a7ea68a-709c-4347-b29a-d29f54764019/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-04-01_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.36.06.png?id=b018b906-3fbf-454a-8b5f-0ccb5f8f09fc&table=block&spaceId=96e7333d-e3eb-4133-91d5-3d2d497146d3&expirationTimestamp=1714298400000&signature=Y2pbvE9pP624g9abG167DLusZx6WViF7nLxdPT8SMgc&downloadName=%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA+2024-04-01+%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE+3.36.06.png" alt="cur" width="900"/></span>
+<span><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbceXgM%2FbtsHOiK4v5u%2FvEne8oNm6AH53JjerCoPr1%2Fimg.png" alt="cur" width="900"/></span>
+
+<br/>
+
+
+- mypage에 목표를 설정해서 현재 진행형인 기록과 지난 달 기록 등을 비교한 progressbar를 추가
+  
+<span><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FYu55j%2FbtsHOfU7PbH%2FkCEQTtL5XtvmTdk3TkzMw0%2Fimg.png" alt="cur" width="300"/></span>
 
 <br/>
 
@@ -102,7 +109,7 @@
   
    - 정적인 렌더링을 동적인 렌더링으로!
 <div align="center">
-<img src="https://file.notion.so/f/f/96e7333d-e3eb-4133-91d5-3d2d497146d3/72e43236-1778-4346-b55c-469f39781240/dynamic.png?id=6460db6c-3602-49f2-b1dc-c55230674733&table=block&spaceId=96e7333d-e3eb-4133-91d5-3d2d497146d3&expirationTimestamp=1714305600000&signature=KuYnWM_BA0LHiWm_G2idBZxrAYct-woHqpg6Usfw0jw&downloadName=dynamic.png" alt="img" width="500" />
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FX53BF%2FbtsGceXeMMX%2FwPj9Bd7nX2yLfTtYHMKKR1%2Fimg.png" alt="img" width="500" />
 </div>
 
 터미널에 출력된 오류 내용을 분석해보면 `revalidatePath`를 쓰는 부분에 대한 이야기가 있다. revalidatePath 부분이 해당 /URL에 있던 캐시를 삭제하고 다시 생성해주는 함수로 페이지를 다시 로드 해주는 기능도 있다. 단순히 새로 고침을 하는게 아니라 변경된 점을 새로 고침해준다. `이 기능이 동적인 렌더링에 해당. 페이지는 기본 값인 정적인 렌더링이 되다보니 충돌나서 오류가 계속난 것`. 
