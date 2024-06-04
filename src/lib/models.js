@@ -48,6 +48,9 @@ const userSchema = new mongoose.Schema(
       },
       image:{
         type:String,
+      },
+      goal:{
+        type: Number,
       }
     },
     { timestamps: true }
