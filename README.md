@@ -2,6 +2,7 @@
 # [T.O.T (Trace of Time)](https://tot-web.vercel.app/)
 하루에 독서를 얼마나 했는지, 공부는 얼마나 했는지 시간을 기록하고 한 달 동안 어떤 일을 얼마나 했는지 확인할 수 있는 시간 기록장. 
 
+[ENGLISH](https://mingblog.vercel.app/blog/projects/tot)
 
 ### ✍🏻 Project Overview
 **루틴을 만들고 싶어서 만들기 시작한 시간 기록장**
